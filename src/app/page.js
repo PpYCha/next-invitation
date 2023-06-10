@@ -1,9 +1,6 @@
 "use client";
-import Card from "@/components/Card";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+
 import { ninangs, ninongs } from "@/data";
-import Image from "next/image";
 import { useState } from "react";
 
 export default function Home() {
@@ -11,19 +8,27 @@ export default function Home() {
   const [ninangList, setNinangList] = useState(ninangs);
   return (
     <>
-      <div className="bg-red-900">
-        <h1>Hello</h1>
-      </div>
-      <div className="flex justify-around bg-white p-3">
-        <div className="text-4xl font-extrabold ">
-          <div className="text-bold">Ninongs</div>
-          <Card godParents={ninongsList} />
+      <div className="card lg:card-side bg-base-100 shadow-xl">
+        <figure>
+          <img src="/images/1.jpg" alt="Album" />
+        </figure>
+        <div className="card-body">
+          <h2 className="card-title">Month 1!</h2>
+          <p>
+            Wow, everything is so new and fascinating! I spend most of my time
+            sleeping, eating, and cuddling with my parents. I love the sound of
+            their voices and feeling their gentle touch. They are my world!
+          </p>
         </div>
-        <div className="">
-          <div className="text-4xl font-extrabold ">Ninangs</div>
-          <Card godParents={ninangList} />
-        </div>
       </div>
+
+      {/* <div class="bg-month2 min-h-screen bg-center bg-no-repeat bg-cover bg-fixed">
+        Hello
+      </div>
+      <div class="bg-month3 min-h-screen bg-center bg-no-repeat bg-cover bg-fixed"></div>
+      <div class="bg-month4 min-h-screen bg-center bg-no-repeat bg-cover bg-fixed"></div>
+      <div class="bg-month5 min-h-screen bg-center bg-no-repeat bg-cover bg-fixed"></div>
+      <div class="bg-month6 min-h-screen bg-center bg-no-repeat bg-cover bg-fixed"></div> */}
     </>
   );
 }
